@@ -57,27 +57,27 @@ public class LinkedList {
             return;
        }
 
-//       public void deleteTail()
-//       {
-//           if(head == null)
-//           {
-//               System.out.println("List is empty");
-//           }
-//           else if((head)
-//           {
-//               head = null;
-//           }
-//           else {
-//               Node currentTail = head;
-//
-//               while (currentTail.next != null) {
-//
-//               }
-//
-//               countNodes--;
-//
-//           }
-//       }
+       public void deleteTail()
+       {
+           if(head == null)
+           {
+               System.out.println("List is empty");
+           }
+           else if(head.next == null)
+           {
+               head = null;
+           }
+           else {
+               Node currentTail = head;
+
+               while (currentTail.next.next != null) {
+                    currentTail = currentTail.next;
+               }
+               currentTail.next = null;
+               countNodes--;
+
+           }
+       }
 
 
        public void printList(){
@@ -109,7 +109,7 @@ public class LinkedList {
         link.insert(3);
         link.addHead(2);
         link.deleteHead();
-        //link.deleteTail();
+        link.deleteTail();
         link.printList();
         System.out.println("Number of Nodes:" + countNodes);
 
