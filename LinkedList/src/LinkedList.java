@@ -1,3 +1,4 @@
+package src;
 
 public class LinkedList {
     private static Node head;
